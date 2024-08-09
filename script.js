@@ -2,7 +2,7 @@ const renderSpace = document.getElementById("render");
 
 async function fetchData() {
     try {
-        const response = await fetch("data.json");
+        const response = await fetch("data/data.json");
         if (!response.ok) {
             throw new Error(
                 `Erro ao carregar o arquivo JSON: ${response.statusText}`
@@ -28,7 +28,7 @@ function criarElemento(tag, className, text) {
 }
 
 function renderUserInfo(nome, idade, email, pais) {
-    const infoCard = criarElemento("div", "card info-card");
+    const card = criarElemento("div", "card");
 
     const descricaoCard = criarElemento("h3", "", "Informações do usuário");
 
@@ -37,13 +37,13 @@ function renderUserInfo(nome, idade, email, pais) {
     const emailP = criarElemento("p", "card-item", `Email: ${email}`);
     const paisP = criarElemento("p", "card-item", `País: ${pais}`);
 
-    infoCard.append(descricaoCard, nomeP, idadeP, emailP, paisP);
-    renderSpace.appendChild(infoCard);
+    card.append(descricaoCard, nomeP, idadeP, emailP, paisP);
+    renderSpace.appendChild(card);
 }
 
 function renderUserEndereco(enderecos) {
     enderecos.forEach((item, index) => {
-        const cardEndereco = criarElemento("div", "card endereco-card");
+        const card = criarElemento("div", "card");
 
         const descricaoCard = criarElemento("h3", "", `Endereço ${index + 1}`);
 
@@ -60,14 +60,14 @@ function renderUserEndereco(enderecos) {
             `Número: ${item.numero}`
         );
 
-        cardEndereco.append(descricaoCard, cepP, cidadeP, ruaP, numeroP);
-        renderSpace.appendChild(cardEndereco);
+        card.append(descricaoCard, cepP, cidadeP, ruaP, numeroP);
+        renderSpace.appendChild(card);
     });
 }
 
 function renderUserTel(telefones) {
     telefones.forEach((item, index) => {
-        const telefoneCard = criarElemento("div", "card tel-card");
+        const card = criarElemento("div", "card");
 
         const descricaoCard = criarElemento("h3", "", `Telefone ${index + 1}`);
 
@@ -78,8 +78,8 @@ function renderUserTel(telefones) {
             `Número: ${item.numero}`
         );
 
-        telefoneCard.append(descricaoCard, tipoP, numeroP);
-        renderSpace.appendChild(telefoneCard);
+        card.append(descricaoCard, tipoP, numeroP);
+        renderSpace.appendChild(card);
     });
 }
 
