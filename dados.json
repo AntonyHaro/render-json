@@ -1,0 +1,34 @@
+{
+    "nome": "João da Silva",
+    "idade": 30,
+    "email": "joao.silva@example.com",
+    "pais": "Brasil",
+    "enderecos": [
+        {
+            "tipo": "residencial",
+            "rua": "Rua das Flores",
+            "numero": 123,
+            "cidade": "São Paulo",
+            "estado": "SP",
+            "cep": "01001-000"
+        },
+        {
+            "tipo": "comercial",
+            "rua": "Avenida Central",
+            "numero": 456,
+            "cidade": "São Paulo",
+            "estado": "SP",
+            "cep": "01002-000"
+        }
+    ],
+    "telefones": [
+        {
+            "tipo": "celular",
+            "numero": "+55 11 91234-5678"
+        },
+        {
+            "tipo": "fixo",
+            "numero": "+55 11 1234-5678"
+        }
+    ]
+}
