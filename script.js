@@ -2,7 +2,7 @@ const renderSpace = document.getElementById("render");
 
 async function fetchData() {
     try {
-        const response = await fetch("dados.json");
+        const response = await fetch("data.json");
         if (!response.ok) {
             throw new Error(
                 `Erro ao carregar o arquivo JSON: ${response.statusText}`
