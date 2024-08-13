@@ -1,7 +1,7 @@
 # Renderizando Dados de um Arquivo JSON
 Este projeto é uma aplicação web simples que busca dados de um arquivo JSON (`dados.json`) e renderiza informações do usuário, incluindo endereço e telefone, em cards estilizados na página HTML.
 
-- Veja a aplicação funcionando em: https://antonyharo.github.io/json-data-render/
+- Veja a aplicação funcionando em: https://antonyharo.github.io/render-json/
 
 ## Funcionalidades
 
